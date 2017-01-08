@@ -16,6 +16,6 @@ gulp webpack
 ブラウザでの確認
 
 ```
-gulp serve
+cordova serve
 ```
 

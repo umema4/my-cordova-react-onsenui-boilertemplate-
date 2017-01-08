@@ -1,20 +1,21 @@
 import React from 'react';
-import ons from 'onsenui';
-import { Page, Button } from 'react-onsenui';
-
-require('onsenui');
+import { Button } from 'react-onsenui';
 
 class MainApp extends React.Component {
 
-  _onClick() {
-    ons.notification.alert('Hello world!');
+  static propTypes = {
+    onClick: React.PropTypes.func.isRequired,
+  }
+
+  _onClick = () => {
+    this.props.onClick();
   }
 
   render() {
     return (
-      <Page>
+      <div>
         <Button onClick={this._onClick}>Tap me!</Button>
-      </Page>
+      </div>
     );
   }
 

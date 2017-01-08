@@ -9,6 +9,9 @@ module.exports = {
       'react',
       'react-dom',
       'react-onsenui',
+      'react-redux',
+      'redux',
+      'redux-thunk',
     ],
   },
   output: {
