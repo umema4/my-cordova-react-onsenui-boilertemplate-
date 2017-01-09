@@ -1,16 +1,13 @@
+import createReducer from './CreateReducer';
 import {
   INCREMENT,
 } from '../actions/Count';
 
-const initialState = 0;
-function count(state = initialState, action) {
-  switch (action.type) {
-  case INCREMENT:
+const count = createReducer(0, {
+  [INCREMENT](state, action) {
     return state + action.count;
-  default:
-    return state;
-  }
-}
+  },
+});
 
 export {
   count as default,
