@@ -48,6 +48,7 @@
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
+    "bluebird": "https://registry.npmjs.org/bluebird/-/bluebird-3.4.1.tgz",
     "lodash": "^4.17.4",
     "onsenui": "^2.0.4",
     "react": "^15.4.1",

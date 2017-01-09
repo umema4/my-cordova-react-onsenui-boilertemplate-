@@ -20,7 +20,10 @@ class MainAppContainer extends React.Component {
   }
 
   _onClick = () => {
-    this.context.store.dispatch(incrementAsync());
+    this.context.store.dispatch(incrementAsync())
+    .then(() => {
+      console.log('done');
+    });
   }
 
   render() {

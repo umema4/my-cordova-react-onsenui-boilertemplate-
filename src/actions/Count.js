@@ -1,3 +1,5 @@
+import Promise from 'bluebird';
+
 export const INCREMENT = 'count/INCREMENT';
 
 export function increment() {
@@ -9,8 +11,8 @@ export function increment() {
 
 export function incrementAsync() {
   return (dispatch) => {
-    setTimeout(() => {
-      dispatch(increment());
-    }, 3000);
+    return new Promise((resolve) => {
+      resolve(dispatch(increment()));
+    });
   };
 }
